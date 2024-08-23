@@ -1,0 +1,108 @@
+
+
+<html>
+	<head>
+		<title>Crystal & Sebastian's Baby Shower</title>
+		<meta name="theme-color" content="#b7e38a">
+		<link rel="icon" href="https://baby.greenstuff.io/favicon.svg">
+		<link rel="mask-icon" href="mask-icon.svg" color="#000000">
+	<style>
+body{
+	margin:40px auto;
+	max-width:650px;
+	line-height:1.6;
+	font-size:20px;
+	color:#444;
+	padding:0 10px;
+}
+
+h1,h2,h3{
+	line-height:1.2;
+	flex: 0 0 auto;
+}
+
+body {
+	background: rgb(75,203,226);
+	background: linear-gradient(90deg,
+		rgba(75,203,226,.75) 0%,
+		rgba(149,214,84,0.65) 15%,
+
+		rgba(116,240,188,0.65) 40%,
+		rgba(116,240,188,0.65) 60%,
+
+		rgba(149,214,84,0.65) 85%,
+		rgba(75,203,226,.75) 100%
+	);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.content {
+	background: #EEEEEE;
+	border-radius: 2em;
+	text-align: center;
+	filter: drop-shadow(10px 15px rgba(128, 128, 128, 0.3));
+
+	display: inline-flex;
+	justify-content: space-around;
+	flex-direction: column;
+	align-items: center;
+	/*flex: 1 1 50%;*/
+	max-height: 66vh;
+	min-height: 50vh;
+	gap: 3em;
+	padding: 0 0 4em 0;
+}
+
+.links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	gap: 1em;
+}
+
+.link {
+	display: block;
+	font-size: 22;
+	font-weight: bold;
+	flex: 0 1 3em;
+
+	background-color: #B7E38A;
+	color: #076072;
+	padding: 15px 25px;
+	text-decoration: none;
+	border-radius: 1em;
+}
+
+.sticker-box {
+	display: block;
+	flex: 1 1 450px;
+	min-height: 450px;
+	min-width: 625px;
+}
+
+.sticker {
+	position: absolute;
+
+	width: 750px;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+}
+
+		</style>
+	</head>
+	<body>
+		<div class='content'>
+			<h1>Twins Green-Husted</h2>
+			<div class='links'>
+				<a class='link' href="https://forms.gle/CuLsbe23c8fdGtWC9">RSVP Form</a>
+				<a class='link' href="https://www.babylist.com/list/twins-green-husted/">Baby Registry</a>
+				<a class='link' href="https://maps.app.goo.gl/9t2DPNgoHkpT2c86A">Venue Location</a>
+			</div>
+			<div class='sticker-box'/>
+			<img class='sticker' src="https://baby.greenstuff.io/stickers.png">
+		</div>
+	</body>
+</html>

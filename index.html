@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crystal & Sebastian's Baby Shower</title>
+	<meta name="theme-color" content="#b7e38a">
+	<link rel="icon" href="https://twins.greenstuff.io/favicon.svg">
+	<link rel="mask-icon" href="mask-icon.svg" color="#000000">
+	<style>
+		/*************************************
+Add media queries to make sure it displays right on smaller devices
+
+split the image of the mushrooms and tree people and apply a gentle skew animation
+
+make a "swivel" animation by using rotate3d with a origin on the x-axis and skew to make a gentle sway dance
+
+add little mushroom people to the bottom that pop-up
+
+add some generic copy, basically what's been put on the envelope, but to make it a bit more text-y
+
+see if it all becomes more sane if we use grid layout
+
+*************************************/
+		@media (width < 1000px) {
+			:root {
+				--max-content-width: 64%;
+				--target-margin: .5em;
+				--font-size: 24px;
+			}
+		}
+
+		@media (1000px <=width) {
+			:root {
+				--max-content-width: 32em;
+				--target-margin: 2em;
+				--font-size: 20px;
+			}
+		}
+
+
+		body {
+			margin: var(--target-margin) auto;
+			max-width: var(--max-content-width);
+			line-height: 1.6;
+			font-size: var(--font-size);
+			color: #444;
+			padding: 0 10px;
+
+			background: rgb(75, 203, 226);
+			background: linear-gradient(90deg,
+					rgba(75, 203, 226, .75) 0%,
+					rgba(149, 214, 84, 0.65) 15%,
+
+					rgba(116, 240, 188, 0.65) 40%,
+					rgba(116, 240, 188, 0.65) 60%,
+
+					rgba(149, 214, 84, 0.65) 85%,
+					rgba(75, 203, 226, .75) 100%);
+		}
+
+		h1,
+		h2,
+		h3 {
+			line-height: 1.2;
+			flex: 0 0 auto;
+		}
+
+		p {
+			margin: 0 4em 0 4em;
+		}
+
+		.content {
+			background: #EEEEEE;
+			border-radius: 2em;
+			text-align: center;
+			filter: drop-shadow(10px 15px rgba(128, 128, 128, 0.3));
+
+			display: flex;
+			justify-content: space-around;
+			flex-direction: column;
+			align-items: center;
+			gap: 2em;
+			padding: 0 0 1em 0;
+		}
+
+		.links {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			gap: 1em;
+		}
+
+		.link {
+			display: block;
+			font-size: calc(var(--font-size) * 1.1);
+			font-weight: bold;
+			flex: 0 1 3em;
+
+			background-color: #B7E38A;
+			color: #076072;
+			padding: 15px 25px;
+			text-decoration: none;
+			border-radius: 1em;
+		}
+
+		.sticker-box {
+			display: block;
+			flex: 1 1 450px;
+			min-height: 450px;
+			min-width: 625px;
+		}
+
+		.sticker {
+			position: absolute;
+
+			width: 750px;
+			left: 50%;
+			transform-origin: bottom;
+			transform: translateX(-50%);
+			animation:
+				20s infinite wobble ease-in-out alternate;
+		}
+
+		@keyframes wobble {
+			from {
+				transform:
+					translateX(-50%) skew(-5deg);
+			}
+
+			to {
+				transform:
+					translateX(-50%) skew(5deg);
+			}
+		}
+
+		.stylish {
+			background: linear-gradient(to right,
+					#444 0%,
+					#444 15%,
+					#6666ff 20%,
+					#0099ff 30%,
+					#00ff00 40%,
+					#ff3399 60%,
+					#6666ff 85%,
+					#444 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent;
+			animation: rainbow_animation 10s ease-in-out infinite;
+			animation-delay: 5s;
+			background-position: -10% 0;
+			background-size: 400% 100%;
+		}
+
+		@keyframes rainbow_animation {
+
+			0%,
+			100% {
+				background-position: 125% 0;
+			}
+
+			50% {
+				background-position: -10% 0;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class='content'>
+		<h1>Twins Green-Husted</h2>
+			<p>You are invited to celebrate the upcoming arrival of the Green-Husted Twins!</p>
+			<p>Sunday September 15th from 1pm to 5pm at Fenner nature centers lower level education space</p>
+			<div class='links'>
+				<a class='link' href="https://forms.gle/CuLsbe23c8fdGtWC9">RSVP Form</a>
+				<a class='link' href="https://www.babylist.com/list/twins-green-husted/">Baby Registry</a>
+				<a class='link' href="https://maps.app.goo.gl/9t2DPNgoHkpT2c86A">Venue Location</a>
+			</div>
+			<p>Bring a pack of diapers in any size for a chance to win a prize!</p>
+			<p>Feel free to shop off our list or anywhere for cloths, but note that we'd love to dress our future little
+				ones in all sorts of fun and wonderful colors and patterns</p>
+			<p><span class="stylish">Vibrant</span> colors and patterns are preferred!</p>
+			<div class='sticker-box' />
+			<img class='sticker' src="https://twins.greenstuff.io/stickers.png">
+	</div>
+</body>
+
+</html>
